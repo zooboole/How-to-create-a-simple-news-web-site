@@ -109,6 +109,8 @@ To start, we'll require the **db.connect.php** in **functions.php** because we w
 
 - File **config/dbconnect.php**
 
+
+`
     
     <?php
     	    $pdo = null;
@@ -130,6 +132,7 @@ To start, we'll require the **db.connect.php** in **functions.php** because we w
     		    }
     	    }
     	
+
 
 
 - File **includes/functions.php**
@@ -165,6 +168,7 @@ This file contains all function we will need in the project. The number of funct
 
 - File **index.php** without PHP
 
+```
 
     <html>
     <head>
@@ -256,6 +260,8 @@ by the following:
 
 - File **read-news.php** 
 
+``
+
     <?php require __DIR__.'../includes/functions.php' ?>
     <html>
     <head>
@@ -332,6 +338,8 @@ by the following:
 
 
 - The file **design/style.css**
+
+`
 
      html, body
     {
