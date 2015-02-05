@@ -1,3 +1,6 @@
+#Create a simple news site with PHP and MySQL using PDO
+
+
 [Introduction](#introduction)
 
 [What will you need?](#what-will-you-need)
@@ -108,37 +111,32 @@ Check out my own folder bellow:
 To start, we'll require the **db.connect.php** in **functions.php** because we will the database instance in our functions. Then in **index.php** and **read-news.php** we'll require  the **functions.php** because we will need those functions in them.
 
 - File **config/dbconnect.php**
-
-
-`
-    
-    <?php
-    	    $pdo = null;
+```
+  <?php
+ 	    $pdo = null;
     	    function connect_to_db()
     	    {
-    		    $dbengine   = 'mysql';
+   		    $dbengine   = 'mysql';
     		    $dbhost     = 'localhost';
-    		    $dbuser     = 'root';
+   		    $dbuser     = 'root';
     		    $dbpassword = '';
     		    $dbname     = 'news';
-    
-    		    try{
+   
+   		    try{
     			    $pdo = new PDO("".$dbengine.":host=$dbhost; dbname=$dbname", $dbuser,$dbpassword);
-    			    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
     			    return $pdo;
     		    }  
     		    catch (PDOException $e){
     			    $e->getMessage();
     		    }
     	    }
-    	
-
+```
 
 
 - File **includes/functions.php**
-
 This file contains all function we will need in the project. The number of functions may increase as the project grows.
 
+```
     <?php 
     	require __DIR__.'/../config/dbconnect.php'; 
     
@@ -163,13 +161,15 @@ This file contains all function we will need in the project. The number of funct
     		$request =  $conn->prepare(" SELECT news_id,  news_title, news_short_description, news_full_content, news_author, news_published_on FROM info_news  WHERE news_id != ? ");
     		return $request->execute(array($differ_id)) ? $request->fetchAll() : false; 
     	}
+```
+
+
 
 
 
 - File **index.php** without PHP
 
 ```
-
     <html>
     <head>
     <title>Welcome to news channel</title>
@@ -219,24 +219,28 @@ This file contains all function we will need in the project. The number of funct
     	</div>
     </body>
     </html>
-
+```
 
 >Note: Each news has a specific URL that links it to the **read-news.php** page like this:
 
-	<a hred="read-news.php?newsid=x">News title</a>
+```
+<a hred="read-news.php?newsid=x">News title</a>
+```
+
 where *x* is a number
 
 The *x* represent the unique id of that particular article. So the *read-news.php?newsid=x* tells the read-news.php page to display a news that has the id *x*.
 
 Now in this file we want the news to be fetched and displayed from the database dynamically. Let call the function **fetchNews()** . 
 To do that let's replace every thing in 
-
+```
     <div class="news"> 
     ... 
     </div> 
+```
 
 by the following:
-
+```
     <?php
 		// get the database handler
 		$dbh = connect_to_db(); // function created in dbconnect, remember?
@@ -253,14 +257,14 @@ by the following:
 	<?php endforeach?>
 
 	<?php endif?>
-
+```
 
 
 
 
 - File **read-news.php** 
 
-``
+```
 
     <?php require __DIR__.'../includes/functions.php' ?>
     <html>
@@ -335,12 +339,11 @@ by the following:
     	</div>
     </body>
     </html>
-
+```
 
 - The file **design/style.css**
 
-`
-
+```
      html, body
     {
     	font-family: verdana;
@@ -433,7 +436,7 @@ by the following:
     	margin: 2em auto;
     	padding: 10px 30px;
     }
-
+```
 
 <a name="room-for-improvement" class="anchor" href="#room-for-improvement"></a>
 [Room for improvement](#room-of-improvement)
