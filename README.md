@@ -23,7 +23,7 @@
 
 This tutorial is an update of the existing tutorial on how to create a very simple news site using php and mysql. The aim of this tutorial is to help you understand some basic concepts when using php and mysql. It's also a way for beginner to learn how to put together a full project using dynamic programming concepts and databases.
 
-[View the demo here](http://phpocean.com/demo/create-a-simple-news-site-with-php-and-mysql-with-pdo/index.php)
+[View the demo here](http://lancecourse.com/demo/create-a-simple-news-site-with-php-and-mysql-with-pdo/index.php)
 
 
 <a name="what-will-you-need" class="anchor" href="#what-will-you-need"></a>
@@ -84,7 +84,7 @@ You may be wondering how I got the structure of this table. The [site structure]
 
 For this project I will be using two main files: **index.php** and **read-news.php**.
 
-Since I want to make the project as simple as possible just to show you the concept, I won't be using a [PHP framework](http://phpocean.com/tutorials/back-end/php-frameworking-introduction-part-1/9) or adopt an [MVC](http://phpocean.com/tutorials/back-end/php-frameworking-introduction-part-1/9) design pattern.
+Since I want to make the project as simple as possible just to show you the concept, I won't be using a [PHP framework](http://lancecourse.com/tutorials/back-end/php-frameworking-introduction-part-1/9) or adopt an [MVC](http://lancecourse.com/tutorials/back-end/php-frameworking-introduction-part-1/9) design pattern.
 
 But, I want to keep my code clean; so I will be using a different file that will contain my database connection (**dbconnect.php**) and another file(**functions.php**) that will contain some set of functions we will create and use them in the project.
 
@@ -469,9 +469,9 @@ Voila. We are at the end of this little tutorial. We have created a simple news 
 
 It's a very simple system, but with it you can improve your skills in PHP/MYSQL applications. It was also an opportunity to introduce a bit how to use PDO.
 
-So, if you have any question or you are meeting some errors, just comment down here. Check out the [demo here](http://phpocean.com/demo/create-a-simple-news-site-with-php-and-mysql-with-pdo/index.php), and you can also [download the zip](http://phpocean.com/tutorials/source-codes/1effdde64f6cff9aecb35e705fbdcc85) file of the source code with comments
+So, if you have any question or you are meeting some errors, just comment down here. Check out the [demo here](http://lancecourse.com/demo/create-a-simple-news-site-with-php-and-mysql-with-pdo/index.php), and you can also [download the zip](https://lancecourse.com/tutorials/source-codes/1effdde64f6cff9aecb35e705fbdcc85) file of the source code with comments
 
 
-  [1]: http://phpocean.com/assets/images/news1.png
-  [2]: http://phpocean.com/assets/images/tablemodel.png
-  [3]: http://phpocean.com/assets/images/news-folders.png
+  [1]: https://lancecourse.com/assets/images/news1.png
+  [2]: https://lancecourse.com/assets/images/tablemodel.png
+  [3]: https://lancecourse.com/assets/images/news-folders.png
